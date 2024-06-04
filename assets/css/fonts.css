@@ -1,0 +1,47 @@
+@font-face {
+	font-family: "Cambon";
+	src: url("Cambon-Regular.eot");
+	src: local("Cambon Regular"), local("Cambon-Regular"),
+		url("Cambon-Regular.eot?#iefix") format("embedded-opentype"),
+		url("Cambon-Regular.woff2") format("woff2"),
+		url("Cambon-Regular.woff") format("woff"),
+		url("Cambon-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Cambon";
+	src: url("../fonts/Cambon-Bold.eot");
+	src: local("Cambon Bold"), local("Cambon-Bold"),
+		url("../fonts/Cambon-Bold.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/Cambon-Bold.woff2") format("woff2"),
+		url("../fonts/Cambon-Bold.woff") format("woff"),
+		url("../fonts/Cambon-Bold.ttf") format("truetype");
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Cambon";
+	src: url("../fonts/Cambon-Medium.eot");
+	src: local("Cambon Medium"), local("Cambon-Medium"),
+		url("../fonts/Cambon-Medium.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/Cambon-Medium.woff2") format("woff2"),
+		url("../fonts/Cambon-Medium.woff") format("woff"),
+		url("../fonts/Cambon-Medium.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Cambon";
+	src: url("../fonts/Cambon-SemiBold.eot");
+	src: local("Cambon SemiBold"), local("Cambon-SemiBold"),
+		url("../fonts/Cambon-SemiBold.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/Cambon-SemiBold.woff2") format("woff2"),
+		url("../fonts/Cambon-SemiBold.woff") format("woff"),
+		url("../fonts/Cambon-SemiBold.ttf") format("truetype");
+	font-weight: 600;
+	font-style: normal;
+}
