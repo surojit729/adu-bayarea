@@ -4,6 +4,9 @@
 		font-size: 90px;
 		max-width: 900px;
 	}
+	.innerBannerData h1 {
+		font-size: 80px;
+	}
 }
 @media (max-width: 1199px) {
 	.banner-content-outer h1 {
