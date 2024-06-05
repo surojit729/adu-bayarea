@@ -9,12 +9,26 @@
 	.banner-content-outer h1 {
 		font-size: 50px;
 	}
+	.hdr_menu li {
+		margin-right: 15px;
+	}
+	.ourProjectWrapper {
+		overflow-x: hidden;
+	}
+	.aduRegulationWrapper .row,
+	.floorPlansWrapper .row,
+	.ourPhilosophyWrapper .row {
+		margin-left: calc(-0.5 * var(--bs-gutter-x));
+		margin-right: calc(-0.5 * var(--bs-gutter-x));
+	}
 }
 
 @media (max-width: 991px) {
 	.logo {
 		width: 250px;
 		display: block;
+		position: relative;
+		z-index: 999;
 	}
 
 	.sticky .logo {
@@ -157,6 +171,7 @@
 		top: 50%;
 		z-index: 100;
 		transform: translateY(-50%);
+		display: none;
 	}
 
 	.mobile_menu_active {
@@ -296,6 +311,79 @@
 	.sticky .header-right-content .menu-toggle-btn span {
 		border-top: 2px solid #000;
 	}
+	.section-padding {
+		overflow-x: hidden;
+	}
+	.logoBox {
+		display: none;
+	}
+	.whyUsDataOter [class*="col-"]:nth-child(2) .whyUsBox,
+	.whyUsDataOter [class*="col-"]:nth-child(4) .whyUsBox {
+		padding-left: 50px;
+	}
+	.projectSlider .data h3 {
+		font-size: 26px;
+	}
+	.projectSlider .projectAminites {
+		bottom: auto;
+		top: 50%;
+		transform: translate(55px, -50%);
+	}
+	.projectSlider .swiper-slide-active .projectAminites {
+		transform: translate(0, -50%);
+	}
+	.projectSlider .projectAminites .item {
+		padding: 4px 6px;
+		height: auto;
+	}
+	.projectSlider .projectAminites .item figure {
+		max-width: 20px;
+	}
+	.projectSlider .data a {
+		bottom: 20px;
+	}
+	.floorPlansWrapper .col {
+		width: 50%;
+		padding: 0 12px;
+	}
+	.section-heading h2 {
+		font-size: 40px;
+	}
+	.homeCtaWrapper .ctaPic {
+		display: none;
+	}
+	.ourServiceWrapper [class*="col-"] {
+		margin-bottom: 30px;
+	}
+	.testimonialWrapper .testimonialVideo {
+		position: static;
+		width: 100%;
+		margin-top: 30px;
+		padding: 12px;
+	}
+	.testimonualContent {
+		max-width: 100%;
+	}
+	.testimonial-slide-card {
+		max-width: 100%;
+	}
+	.footer-logo {
+		margin-left: 0;
+		text-align: center;
+	}
+	.footer-social {
+		text-align: center;
+	}
+	.footer-top-row > [class*="col-"]:nth-child(2) {
+		padding-left: 12px;
+	}
+	.footer-top-row > [class*="col-"]:last-child {
+		padding-left: 12px;
+	}
+	.offcCanvasActive.home .logo img {
+		-webkit-filter: none;
+		filter: none;
+	}
 }
 
 @media (max-width: 767px) {
@@ -365,12 +453,121 @@
 	body.home .banner-wrapper .banner-video {
 		min-height: 730px;
 	}
-	body.home .banner-content-outer {
-		transform: translate(-50%, -50%);
-		top: 40%;
+	.section-padding {
+		padding: 40px 0;
 	}
-	.page-template-template-about .banner-wrapper .banner-video {
-		min-height: auto;
-		height: 500px;
+	.whyUsBox,
+	.whyUsDataOter [class*="col-"]:nth-child(2) .whyUsBox,
+	.whyUsDataOter [class*="col-"]:nth-child(3) .whyUsBox,
+	.whyUsDataOter [class*="col-"]:nth-child(1) .whyUsBox,
+	.whyUsDataOter [class*="col-"]:nth-child(4) .whyUsBox {
+		padding: 25px 20px;
+		border-radius: 0px 15px 0 15px;
+	}
+	.whyUsBox .dataTitle h3 {
+		font-size: 20px;
+	}
+	.whyUsWrapper .section-heading {
+		margin: 0 auto 30px;
+	}
+	.infiniteStepsWrapper {
+		padding: 40px 0;
+		min-height: 450px;
+	}
+	.processRow {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.processRow .item:not(:last-child)::after {
+		display: none;
+	}
+	.processRow .item h3 {
+		font-size: 22px;
+	}
+	.processRow .item {
+		width: 50%;
+		padding: 60px 5px 0;
+	}
+	.processRow .item::before {
+		top: 0;
+		width: 50px;
+		height: 50px;
+		font-size: 24px;
+	}
+	.infiniteStepsWrapper .section-heading h2 {
+		margin-bottom: 40px;
+	}
+	.service-slider-outer {
+		margin: 0;
+		padding: 0 12px;
+	}
+	.floorPlansWrapper .col {
+		width: 100%;
+	}
+	.floorPlanCard p {
+		font-size: 17px;
+		text-align: center;
+	}
+	.floorPlanCard h3 {
+		text-align: center;
+	}
+	.homeCtaWrapper .section-heading {
+		margin-right: 0;
+		text-align: center;
+	}
+	.ourServiceCard h3 {
+		font-size: 25px;
+	}
+	.aduVisionWrapper .tabCumAccordian .tabMain {
+		display: none;
+	}
+	.aduVisionWrapper .tabCumAccordian > div {
+		width: 100%;
+		max-width: 100%;
+	}
+	.aduVisionWrapper .tabCumAccordian .tabNav .title-outer h3 {
+		font-size: 22px;
+	}
+	.ourPhilosophyWrapper [class*="col-"] {
+		padding-left: 12px;
+		padding-right: 12px;
+	}
+	.aduVisionWrapper .tabCumAccordian .tabNav ul li::before {
+		top: 4px;
+		width: 40px;
+		height: 40px;
+		background-color: #084c83;
+		color: #fff;
+		font-size: 15px;
+	}
+	.aduVisionWrapper .tabCumAccordian .tabNav ul li {
+		margin-bottom: 25px;
+		padding-left: 60px;
+	}
+	.aduVisionWrapper .tabCumAccordian .tabNav ul li::after {
+		left: 20px;
+	}
+	.ourPhilosophyWrapper .datTitle figure {
+		width: 30px;
+		min-width: 30px;
+		max-width: 30px;
+	}
+	.footer-wrapper {
+		padding: 40px 0;
+	}
+	.footer-top-row > [class*="col-"] {
+		padding: 0 12px;
+		margin-bottom: 30px;
+	}
+	.footerFormOuter .title p {
+		font-size: 22px;
+		text-align: center;
+	}
+	.footer-bottom-row .holder {
+		padding: 30px 0 0;
+		margin-top: 0;
+	}
+	.footer-widget {
+		text-align: center;
 	}
 }

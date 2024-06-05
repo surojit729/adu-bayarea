@@ -1530,6 +1530,7 @@ input[type="number"]::-webkit-outer-spin-button {
 	text-transform: uppercase;
 	padding-right: 20px;
 	color: #868686;
+	display: none;
 }
 .off-canvas-menu-holder .off-canvas-close-btn i {
 	font-size: 25px;
@@ -1632,6 +1633,9 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .off-canvas-cta-btn {
 	margin-bottom: 30px;
+}
+.off-canvas-cta-btn .btn {
+	min-width: 160px;
 }
 .menu-holder .header-social-links > a {
 	width: 32px;
@@ -1919,6 +1923,7 @@ input[type="number"]::-webkit-outer-spin-button {
 	color: var(--color-white);
 	letter-spacing: -0.02em;
 	transition: var(--primary-transition);
+	text-align: center;
 }
 .projectSlider .swiper-slide-active .data a {
 	opacity: 1;

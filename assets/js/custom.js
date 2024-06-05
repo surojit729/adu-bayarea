@@ -70,7 +70,7 @@ jQuery(document).ready(function () {
             throttleDelay: 0,
             offset: 0,
             disable: function () {
-                var maxWidth = 768;
+                var maxWidth = 2768;
                 return window.innerWidth < maxWidth;
             }
         });
@@ -96,18 +96,18 @@ jQuery(document).ready(function () {
             el: '.swiper-pagination',
             clickable: true
         },
-        autoplay: {
-            delay: 4000,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-        },
+        // autoplay: {
+        //     delay: 4000,
+        //     disableOnInteraction: false,
+        //     pauseOnMouseEnter: true,
+        // },
         breakpoints: {
             318: {
                 slidesPerView: 1,
                 spaceBetween: 20,
             },
             767: {
-                slidesPerView: 1.3,
+                slidesPerView: 3,
                 spaceBetween: 20,
             },
             992: {
@@ -134,9 +134,13 @@ jQuery(document).ready(function () {
     jQuery('.menu-toggle-btn').click(function () {
         jQuery('.off-canvas-menu-outer').toggleClass('show');
         jQuery('body').css({ 'overflow-y': 'hidden' });
+        setTimeout(function () {
+            jQuery('body').addClass('offcCanvasActive');
+        }, 300);
     });
     jQuery('.off-canvas-close-btn').click(function () {
         jQuery('.off-canvas-menu-outer').removeClass('show');
+        jQuery('body').removeClass('offcCanvasActive');
 
     });
     jQuery(".off-canvas-close-btn").click(function () {
