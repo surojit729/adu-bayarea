@@ -70,7 +70,7 @@ jQuery(document).ready(function () {
             throttleDelay: 0,
             offset: 0,
             disable: function () {
-                var maxWidth = 2768;
+                var maxWidth = 768;
                 return window.innerWidth < maxWidth;
             }
         });
@@ -96,11 +96,11 @@ jQuery(document).ready(function () {
             el: '.swiper-pagination',
             clickable: true
         },
-        // autoplay: {
-        //     delay: 4000,
-        //     disableOnInteraction: false,
-        //     pauseOnMouseEnter: true,
-        // },
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        },
         breakpoints: {
             318: {
                 slidesPerView: 1,
