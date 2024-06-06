@@ -28,14 +28,14 @@
 
 @media (max-width: 991px) {
 	.logo {
-		width: 250px;
+		width: 180px;
 		display: block;
 		position: relative;
 		z-index: 999;
 	}
 
 	.sticky .logo {
-		width: 240px;
+		width: 150px;
 	}
 
 	.nav_holder {
@@ -301,7 +301,7 @@
 		display: none;
 	}
 	.header-right-content .menu-toggle-btn span {
-		border-top: 2px solid #fff;
+		border-top: 2px solid #084c83;
 	}
 	.banner-social-outer::before,
 	.banner-social-outer::after {
@@ -312,7 +312,7 @@
 	}
 
 	.sticky .header-right-content .menu-toggle-btn span {
-		border-top: 2px solid #000;
+		border-top: 2px solid #084c83;
 	}
 	.section-padding {
 		overflow-x: hidden;
@@ -387,6 +387,20 @@
 		-webkit-filter: none;
 		filter: none;
 	}
+	.locationBannerPic {
+		display: none;
+	}
+	.innerBannerData h1 {
+		font-size: 50px;
+	}
+	.sticky .logo img {
+		-webkit-filter: none;
+		filter: none;
+	}
+	.off-canvas-menu-holder .off-canvas-close-btn i {
+		font-size: 35px;
+		color: #084c83;
+	}
 }
 
 @media (max-width: 767px) {
@@ -422,8 +436,8 @@
 		line-height: 1.5;
 	}
 	.off-canvas-menu-holder .off-canvas-close-btn {
-		top: 25px;
-		right: 20px;
+		top: 14px;
+		right: 15px;
 	}
 	.banner-content-outer .btn {
 		min-width: auto;
@@ -572,5 +586,18 @@
 	}
 	.footer-widget {
 		text-align: center;
+	}
+	.innerBannerWrapper {
+		padding: 110px 0 60px;
+	}
+	.innerBannerData h1 {
+		font-size: 32px;
+	}
+	.breadcrumb-wrapper {
+		margin-bottom: 20px;
+	}
+	.innerBannerData p {
+		font-size: 16px;
+		margin-bottom: 15px;
 	}
 }

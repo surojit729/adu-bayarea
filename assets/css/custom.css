@@ -1488,15 +1488,16 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .banner-social-outer .footer-social a {
 	font-size: 20px;
-	background-color: rgba(255, 255, 255, 0.09);
-	border: 1px solid var(--color-white);
+	background-color: transparent;
+	border: 1px solid #5e5e5e;
 	border-radius: 50%;
-	color: var(--color-white);
+	color: #5e5e5e;
 	margin-right: 0;
 }
 .banner-social-outer .footer-social a:hover {
 	background-color: var(--primary-color);
 	border-color: var(--primary-color);
+	color: var(--color-white);
 }
 .off-canvas-menu-holder {
 	transform: translateX(100%);
@@ -1708,6 +1709,16 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .home .nav_holder {
 	border-color: rgba(255, 255, 255, 0.13);
+}
+.home .banner-social-outer .footer-social a {
+	background-color: rgba(255, 255, 255, 0.09);
+	border: 1px solid var(--color-white);
+	color: var(--color-white);
+}
+.home .banner-social-outer .footer-social a:hover {
+	background-color: var(--primary-color);
+	border-color: var(--primary-color);
+	color: var(--color-white);
 }
 .header-cta-btn .btn {
 	padding: 10px 38px 10px 18px;
