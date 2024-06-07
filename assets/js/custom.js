@@ -188,5 +188,40 @@ jQuery(document).ready(function () {
             jQuery(this).closest('.tabWithImage').find(".tabImage").eq(index).siblings().hide();
         });
     }
+    // ScrollSpy
+    jQuery('.scrollSpy a').click(function () {
+        jQuery('html, body').animate({
+            scrollTop: jQuery(jQuery(this).attr('href')).offset().top - 100
+        }, 500);
+        return false;
+    });
+    // Cache selectors
+    var topMenu = jQuery(".scrollSpy"),
+        topMenuHeight = topMenu.outerHeight() + 15,
+        // All list items
+        menuItems = topMenu.find("a"),
+        // Anchors corresponding to menu items
+        scrollItems = menuItems.map(function () {
+            var item = jQuery(jQuery(this).attr("href"));
+            if (item.length) { return item; }
+        });
 
+    // Bind to scroll
+    jQuery(window).scroll(function () {
+        // Get container scroll position
+        var fromTop = jQuery(this).scrollTop() + topMenuHeight;
+
+        // Get id of current scroll item
+        var cur = scrollItems.map(function () {
+            if (jQuery(this).offset().top < fromTop)
+                return this;
+        });
+        // Get the id of the current element
+        cur = cur[cur.length - 1];
+        var id = cur && cur.length ? cur[0].id : "";
+        // Set/remove active class
+        menuItems
+            .parent().removeClass("active")
+            .end().filter("[href='#" + id + "']").parent().addClass("active");
+    });
 });

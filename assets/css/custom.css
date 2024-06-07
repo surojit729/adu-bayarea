@@ -2554,3 +2554,6 @@ input[type="number"]::-webkit-outer-spin-button {
 		-webkit-transform: translateY(-50%) rotate(360deg);
 	}
 }
+.locationinglBanner {
+	min-height: 630px;
+}
