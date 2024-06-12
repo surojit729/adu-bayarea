@@ -2843,3 +2843,12 @@ input[type="number"]::-webkit-outer-spin-button {
 .locationDetailsContentOuter .footerFormOuter .submit-field::before {
 	right: 20px;
 }
+.sidebarWidget .locationMenu {
+	max-height: 300px;
+	overflow-y: hidden;
+	transition: max-height 0.25s ease-in;
+}
+.sidebarWidget .locationMenu.active {
+	max-height: 500px;
+	transition: max-height 0.25s ease-in;
+}

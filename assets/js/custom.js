@@ -285,4 +285,14 @@ jQuery(document).ready(function () {
             )
         })
     })
+    // Sidebar Location Toogle
+    $(".toggleBtn p").click(function () {
+        $(this).text(function (i, v) {
+            return v === 'view More +' ? 'View less' : 'view More +'
+        });
+    });
+    jQuery(".toggleBtn p").click(function () {
+        jQuery(".locationMenu").toggleClass("active");
+    });
+
 });
