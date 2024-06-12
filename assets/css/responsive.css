@@ -441,6 +441,7 @@
 	}
 	.banner-content-outer .btn {
 		min-width: auto;
+		width: 100%;
 	}
 	.btn,
 	.basic-btn {

@@ -115,6 +115,39 @@ jQuery(document).ready(function () {
             },
         },
     });
+    // Location Slider
+    new Swiper('.relatedLocationSlider', {
+        slidesPerView: 4,
+        paginationClickable: true,
+        spaceBetween: 40,
+        slideToClickedSlide: true,
+        loop: false,
+        speed: 1000,
+        // loopAdditionalSlides: 5,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        },
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        },
+        breakpoints: {
+            318: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            767: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            992: {
+                slidesPerView: 4,
+            },
+        },
+    });
+    // Testimonial Slider
     new Swiper('.testimonial-slider-outer .swiper', {
         slidesPerView: 1,
         loop: false,
@@ -188,40 +221,68 @@ jQuery(document).ready(function () {
             jQuery(this).closest('.tabWithImage').find(".tabImage").eq(index).siblings().hide();
         });
     }
-    // ScrollSpy
-    jQuery('.scrollSpy a').click(function () {
-        jQuery('html, body').animate({
-            scrollTop: jQuery(jQuery(this).attr('href')).offset().top - 100
-        }, 500);
-        return false;
-    });
-    // Cache selectors
-    var topMenu = jQuery(".scrollSpy"),
-        topMenuHeight = topMenu.outerHeight() + 15,
-        // All list items
-        menuItems = topMenu.find("a"),
-        // Anchors corresponding to menu items
-        scrollItems = menuItems.map(function () {
-            var item = jQuery(jQuery(this).attr("href"));
-            if (item.length) { return item; }
-        });
 
-    // Bind to scroll
-    jQuery(window).scroll(function () {
-        // Get container scroll position
-        var fromTop = jQuery(this).scrollTop() + topMenuHeight;
-
-        // Get id of current scroll item
-        var cur = scrollItems.map(function () {
-            if (jQuery(this).offset().top < fromTop)
-                return this;
+    /*
+        // Cache selectors
+        var topMenu = jQuery(".scrollSpy"),
+            topMenuHeight = topMenu.outerHeight() + 150,
+            // All list items
+            menuItems = topMenu.find("a"),
+            // Anchors corresponding to menu items
+            scrollItems = menuItems.map(function () {
+                var item = jQuery(jQuery(this).attr("href"));
+                if (item.length) { return item; }
+            });
+    
+        // Bind to scroll
+        jQuery(window).scroll(function () {
+            // Get container scroll position
+            var fromTop = jQuery(this).scrollTop() + topMenuHeight;
+    
+            // Get id of current scroll item
+            var cur = scrollItems.map(function () {
+                if (jQuery(this).offset().top < fromTop)
+                    return this;
+            });
+            // Get the id of the current element
+            cur = cur[cur.length - 1];
+            var id = cur && cur.length ? cur[0].id : "";
+            // Set/remove active class
+            menuItems
+                .parent().removeClass("active")
+                .end().filter("[href='#" + id + "']").parent().addClass("active");
         });
-        // Get the id of the current element
-        cur = cur[cur.length - 1];
-        var id = cur && cur.length ? cur[0].id : "";
-        // Set/remove active class
-        menuItems
-            .parent().removeClass("active")
-            .end().filter("[href='#" + id + "']").parent().addClass("active");
-    });
+        var id = 0
+        $(".locationDetailsContentOuter h2").each(function () {
+            $(this).attr("id", "item-" + id)
+            id++
+        })
+    
+        var searchArea = $(".locationDetailsContentOuter")
+    
+        var blockDynamic = $(".scrollSpy")
+        searchArea.find("h2").each(function (i, e) {
+            var title = $(this).text()
+            blockDynamic.append(
+                '<a href="#item-' + i + '"><h3>' + title + "</h3></a>"
+            )
+        })
+    */
+    // Scrollspy
+    jQuery("body").scrollspy({
+        target: ".scrollSpy",
+        offset: 270,
+    })
+    // Blog Side Menu Scroll
+    jQuery(".scrollSpy a").each(function () {
+        jQuery(this).on("click", function (event) {
+            event.preventDefault()
+            jQuery("html, body").animate(
+                {
+                    scrollTop: jQuery(jQuery(this).attr("href")).offset().top - 100,
+                },
+                "slow"
+            )
+        })
+    })
 });
