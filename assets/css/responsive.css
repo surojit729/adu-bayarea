@@ -401,6 +401,22 @@
 		font-size: 35px;
 		color: #084c83;
 	}
+	.locationContentWrapper {
+		padding-top: 60px;
+	}
+	.locationContentWrapper .featuredPic {
+		margin-top: 0;
+	}
+	.locationinglBanner {
+		min-height: auto;
+	}
+	.sidebar {
+		margin-left: 0;
+		margin-top: 40px;
+	}
+	.tocWidget {
+		display: none;
+	}
 }
 
 @media (max-width: 767px) {
@@ -600,5 +616,57 @@
 	.innerBannerData p {
 		font-size: 16px;
 		margin-bottom: 15px;
+	}
+	.locationDetailsContentOuter .linkContent::before {
+		display: none;
+	}
+	.locationDetailsContentOuter .linkContent {
+		margin: 25px 0;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 15px;
+	}
+	.locationDetailsContentOuter .linkItem a {
+		font-size: 17px;
+	}
+	.tableHolder {
+		overflow-x: scroll;
+	}
+	.locationDetailsContentOuter h3 {
+		font-size: 28px;
+	}
+	.locationDetailsContentOuter h3 {
+		font-size: 23px;
+	}
+	.section-heading p {
+		font-size: 16px;
+		line-height: 1.6;
+	}
+	.locationDetailsContentOuter .workProcessContent,
+	.locationDetailsContentOuter .tableContent,
+	.locationDetailsContentOuter .faqContent {
+		padding: 15px;
+	}
+	.locationDetailsContentOuter .workProcessContent h2,
+	.locationDetailsContentOuter .tableContent h2,
+	.locationDetailsContentOuter .faqContent h2 {
+		font-size: 28px;
+	}
+	.faq_acrdn .accordion-item .accordion-header .accordion-button {
+		padding: 15px 35px 16px 0;
+		font-size: 18px;
+	}
+	.faq_acrdn .accordion-button::after {
+		top: 15px;
+		width: 22px;
+		height: 22px;
+		font-size: 12px;
+	}
+	.faq_acrdn .accordion-button.collapsed:after {
+		top: 15px;
+	}
+	.locationDetailsContentOuter .footerFormOuter {
+		margin-top: 25px;
+		padding: 15px;
 	}
 }

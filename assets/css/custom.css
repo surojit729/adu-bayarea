@@ -2736,7 +2736,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .faq_acrdn .accordion-item .accordion-header .accordion-button {
 	font-family: var(--secondary-font);
-	padding: 20px 0;
+	padding: 20px 35px 20px 0;
 	display: block;
 	width: 100%;
 	font-size: 20px;
@@ -2764,7 +2764,7 @@ input[type="number"]::-webkit-outer-spin-button {
 	font-family: "Line Awesome Free";
 	position: absolute;
 	top: 19px;
-	right: 20px;
+	right: 0;
 	width: 28px;
 	height: 28px;
 	font-size: 18px;
@@ -2843,12 +2843,104 @@ input[type="number"]::-webkit-outer-spin-button {
 .locationDetailsContentOuter .footerFormOuter .submit-field::before {
 	right: 20px;
 }
+
+.sidebar {
+	margin-left: 4em;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 100px;
+}
+.sidebarWidget {
+	margin-bottom: 30px;
+}
+.sidebarWidget .title p {
+	font-size: 22px;
+	font-weight: 500;
+	line-height: 1.4;
+	color: #232323;
+	text-transform: capitalize;
+	margin-bottom: 20px;
+}
+.scrollSpy li {
+	margin-bottom: 15px;
+	position: relative;
+	padding-left: 22px;
+}
+.scrollSpy li:last-child {
+	margin-bottom: 0;
+}
+.scrollSpy li::before {
+	content: "";
+	position: absolute;
+	top: 6px;
+	left: 0px;
+	width: 12px;
+	height: 12px;
+	background-color: #bad4ee;
+	border-radius: 100%;
+	transition: var(--primary-transition);
+}
+.scrollSpy a {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 22px;
+	color: #4f4f4f;
+}
+.scrollSpy li:hover a,
+.scrollSpy li.active a {
+	color: var(--primary-color);
+}
+.scrollSpy li.active::before,
+.scrollSpy li:hover::before {
+	background-color: var(--primary-color);
+}
+.floorPlansWidget {
+	background-color: #fff;
+	padding: 20px 15px;
+	border: 1px solid #dedede;
+	border-radius: 10px;
+}
+.floorPlansWidget img {
+	width: 100%;
+}
+.floorPlansWidget .btnHolder {
+	margin-top: 18px;
+	text-align: center;
+}
+.floorPlansWidget .btn {
+	font-size: 15px;
+	padding: 10px 38px 10px 18px;
+}
+.locationWidget a {
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 1.3;
+	background-color: var(--color-white);
+	display: block;
+	margin-bottom: 8px;
+	border-radius: 5px;
+	padding: 9px 12px;
+	color: #4f4f4f;
+}
+.locationWidget a:hover {
+	color: var(--primary-color);
+}
 .sidebarWidget .locationMenu {
-	max-height: 300px;
+	max-height: 340px;
 	overflow-y: hidden;
 	transition: max-height 0.25s ease-in;
 }
 .sidebarWidget .locationMenu.active {
-	max-height: 500px;
+	max-height: 1990px;
 	transition: max-height 0.25s ease-in;
+}
+.toggleBtn p {
+	font-family: var(--secondary-font);
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 19.53px;
+	color: #405684;
+	margin-top: 10px;
+	text-transform: capitalize;
+	cursor: pointer;
 }

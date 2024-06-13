@@ -269,17 +269,45 @@ jQuery(document).ready(function () {
         })
     */
     // Scrollspy
-    jQuery("body").scrollspy({
-        target: ".scrollSpy",
-        offset: 270,
-    })
+    // jQuery("body").scrollspy({
+    //     target: ".scrollSpy",
+    //     offset: 270,
+    // })
+    // Cache selectors
+    var topMenu = jQuery(".scrollSpy"),
+        topMenuHeight = topMenu.outerHeight() + 50,
+        // All list items
+        menuItems = topMenu.find("a"),
+        // Anchors corresponding to menu items
+        scrollItems = menuItems.map(function () {
+            var item = jQuery(jQuery(this).attr("href"));
+            if (item.length) { return item; }
+        });
+    // Bind to scroll
+    jQuery(window).scroll(function () {
+        // Get container scroll position
+        var fromTop = jQuery(this).scrollTop() + topMenuHeight;
+
+        // Get id of current scroll item
+        var cur = scrollItems.map(function () {
+            if (jQuery(this).offset().top < fromTop)
+                return this;
+        });
+        // Get the id of the current element
+        cur = cur[cur.length - 1];
+        var id = cur && cur.length ? cur[0].id : "";
+        // Set/remove active class
+        menuItems
+            .parent().removeClass("active")
+            .end().filter("[href='#" + id + "']").parent().addClass("active");
+    });
     // Blog Side Menu Scroll
     jQuery(".scrollSpy a").each(function () {
         jQuery(this).on("click", function (event) {
             event.preventDefault()
             jQuery("html, body").animate(
                 {
-                    scrollTop: jQuery(jQuery(this).attr("href")).offset().top - 100,
+                    scrollTop: jQuery(jQuery(this).attr("href")).offset().top - 150,
                 },
                 "slow"
             )
