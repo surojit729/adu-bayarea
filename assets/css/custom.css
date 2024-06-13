@@ -2588,14 +2588,14 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .locationDetailsContentOuter h3 {
 	font-size: 40px;
-	margin-bottom: 15px;
+	margin-bottom: 20px;
 }
 .locationDetailsContentOuter .cardContent {
 	margin: 20px 0;
 }
 .locationDetailsContentOuter .cardItem {
 	padding: 20px;
-	background-color: var(--color-white);
+	background-color: #f1f8ff;
 	border-radius: 10px;
 	margin-bottom: 18px;
 }
@@ -2943,4 +2943,155 @@ input[type="number"]::-webkit-outer-spin-button {
 	margin-top: 10px;
 	text-transform: capitalize;
 	cursor: pointer;
+}
+.locationinglBanner [class*="col-"] {
+	width: 100%;
+}
+.locationDetailsContentOuter .bgContent {
+	padding: 35px;
+	background-color: #f1f8ff;
+	border-radius: 10px;
+	margin-bottom: 20px;
+}
+.locationDetailsContentOuter .noBgContent {
+	padding: 0;
+	background-color: transparent;
+	border-radius: 0;
+	margin-bottom: 20px;
+}
+.twoColListContent {
+	flex-wrap: wrap;
+	margin: 0 -15px;
+}
+.twoColListContent .colItem {
+	width: 50%;
+	padding: 0 15px;
+	margin-bottom: 12px;
+}
+.twoColListContent .colItem .title p {
+	font-size: 20px;
+	line-height: 1.5;
+	font-weight: 500;
+	color: #424d53;
+	position: relative;
+	margin-bottom: 8px;
+	padding-left: 28px;
+}
+.twoColListContent .colItem .title p::before {
+	font-family: "Line Awesome Free";
+	content: "\f00c";
+	position: absolute;
+	top: 5px;
+	left: 0;
+	font-weight: 900;
+	color: var(--color-white);
+	font-size: 12px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 17px;
+	height: 17px;
+	background-color: var(--primary-color);
+	border-radius: 100%;
+	transition: var(--primary-transition);
+}
+.twoColListContent .colItem .subText p {
+	color: #555d61;
+	line-height: 1.7;
+}
+.locationDetailsContentOuter figure {
+	margin-bottom: 20px;
+}
+.locationDetailsContentOuter figure img {
+	border-radius: 10px;
+	position: relative;
+	overflow: hidden;
+}
+.locationDetailsContentOuter .qualifyContent li,
+.locationDetailsContentOuter .propertyDesignation li {
+	color: #424d53;
+	position: relative;
+	margin-bottom: 20px;
+	padding-left: 28px;
+}
+.locationDetailsContentOuter .qualifyContent li::before,
+.locationDetailsContentOuter .propertyDesignation li::before {
+	font-family: "Line Awesome Free";
+	content: "\f00c";
+	position: absolute;
+	top: 5px;
+	left: 0;
+	font-weight: 900;
+	color: var(--color-white);
+	font-size: 12px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 17px;
+	height: 17px;
+	background-color: var(--primary-color);
+	border-radius: 100%;
+	transition: var(--primary-transition);
+}
+.alm-layouts .alm-listing {
+	margin-right: calc(-0.5 * var(--bs-gutter-x));
+	margin-left: calc(-0.5 * var(--bs-gutter-x));
+	margin-top: 30px;
+}
+.alm-btn-wrap {
+	margin-bottom: 0 !important;
+}
+.alm-btn-wrap .alm-load-more-btn {
+	font-family: var(--secondary-font);
+	font-size: 16px !important;
+	line-height: 1.4 !important;
+	font-weight: 500 !important;
+	letter-spacing: 0.5px;
+	text-align: center !important;
+	text-transform: capitalize;
+	color: #fff;
+	border: 1px solid var(--primary-color) !important;
+	background-color: var(--primary-color) !important;
+	padding: 13px 18px !important;
+	border-radius: 30px !important;
+	cursor: pointer !important;
+	display: inline-flex !important;
+	justify-content: center;
+	overflow: hidden;
+	z-index: 9;
+	height: auto !important;
+	min-width: 215px;
+	margin-top: 60px !important;
+}
+.alm-btn-wrap .alm-load-more-btn:hover,
+.alm-btn-wrap .alm-load-more-btn:focus,
+.alm-btn-wrap .alm-load-more-btn:active,
+.alm-btn-wrap .alm-load-more-btn:active:focus {
+	box-shadow: 0 10px 30px rgba(8, 76, 131, 0.68) !important;
+	border-color: var(--primary-color) !important;
+}
+.alm-btn-wrap .alm-load-more-btn::before {
+	display: none !important;
+}
+.alm-btn-wrap .alm-load-more-btn::after {
+	font-family: "Line Awesome Free";
+	content: "\f110";
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	transform: translateY(-50%);
+	font-weight: 900;
+	color: var(--color-white);
+	font-size: 24px;
+	transition: var(--primary-transition);
+	opacity: 0;
+	animation: spin 1s ease-in-out infinite;
+	-webkit-animation: spin 1s ease-in-out infinite;
+}
+.alm-btn-wrap .alm-load-more-btn.loading::after {
+	opacity: 1;
+}
+.alm-btn-wrap .alm-load-more-btn.done,
+.alm-btn-wrap .alm-load-more-btn:disabled {
+	display: none !important;
 }
