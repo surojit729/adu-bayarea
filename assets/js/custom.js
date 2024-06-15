@@ -81,7 +81,7 @@ jQuery(document).ready(function () {
         // increase value up to 10, then refresh AOS
         scrollRef <= 10 ? scrollRef++ : AOS.refresh();
     });
-    // Service Slider
+    // Project Slider
     new Swiper('.projectSlider', {
         slidesPerView: 3,
         paginationClickable: true,
@@ -115,6 +115,40 @@ jQuery(document).ready(function () {
             },
         },
     });
+    new Swiper('.projectGallerySlider', {
+        slidesPerView: 3,
+        paginationClickable: true,
+        spaceBetween: 0,
+        slideToClickedSlide: true,
+        centeredSlides: true,
+        roundLengths: true,
+        loop: true,
+        speed: 1000,
+        // loopAdditionalSlides: 5,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        },
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        },
+        breakpoints: {
+            318: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            767: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            992: {
+                slidesPerView: 3,
+            },
+        },
+    });
+
     // Location Slider
     new Swiper('.relatedLocationSlider', {
         slidesPerView: 4,
@@ -144,6 +178,39 @@ jQuery(document).ready(function () {
             },
             992: {
                 slidesPerView: 4,
+            },
+        },
+    });
+    // Related Project
+
+    new Swiper('.relatedProjectSlider', {
+        slidesPerView: 3,
+        paginationClickable: true,
+        spaceBetween: 40,
+        slideToClickedSlide: true,
+        loop: false,
+        speed: 1000,
+        // loopAdditionalSlides: 5,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        },
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        },
+        breakpoints: {
+            318: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            767: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            992: {
+                slidesPerView: 3,
             },
         },
     });
