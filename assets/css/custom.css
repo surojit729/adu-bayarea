@@ -1636,8 +1636,12 @@ input[type="number"]::-webkit-outer-spin-button {
 .off-canvas-menu-holder .off-canvas-close-btn i {
 	font-size: 40px;
 	color: #363636;
+	transition: var(--primary-transition);
 }
-
+.off-canvas-menu-holder .off-canvas-close-btn:hover i {
+	color: var(--primary-color);
+	transform: rotate(90deg);
+}
 .side-pic {
 	background: center no-repeat;
 	background-size: cover;
@@ -3583,4 +3587,23 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .serviceAreaWrapper .floorPlanCard figure {
 	border-radius: 10px;
+}
+.FloorPlansSliderOuter .projectGalleryPic {
+	border: 1px solid #b5c8db;
+	border-radius: 10px;
+}
+.projectGalleryPic {
+	position: relative;
+	overflow: hidden;
+	border-radius: 10px;
+}
+.projectGalleryPic img {
+	width: 100%;
+	transition: transform 0.5s ease 0s;
+	position: relative;
+	border-radius: 10px;
+}
+
+.projectGalleryPic:hover > img {
+	transform: scale(1.1);
 }
