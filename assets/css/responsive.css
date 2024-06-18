@@ -382,6 +382,8 @@
 	}
 	.footer-top-row > [class*="col-"]:last-child {
 		padding-left: 12px;
+		width: 100%;
+		justify-content: center;
 	}
 	.offcCanvasActive.home .logo img {
 		-webkit-filter: none;
@@ -416,6 +418,12 @@
 	}
 	.tocWidget {
 		display: none;
+	}
+	.prjectDetailsBanner {
+		min-height: auto;
+	}
+	.proejctGalleryOuter {
+		margin: 0;
 	}
 }
 
@@ -592,6 +600,7 @@
 	.footer-top-row > [class*="col-"] {
 		padding: 0 12px;
 		margin-bottom: 30px;
+		width: 100%;
 	}
 	.footerFormOuter .title p {
 		font-size: 22px;
