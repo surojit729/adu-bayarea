@@ -425,6 +425,12 @@
 	.proejctGalleryOuter {
 		margin: 0;
 	}
+	.menu-holder .nav li.current-menu-item {
+		background-color: #084c83;
+	}
+	.menu-holder .nav li.current-menu-item a {
+		color: #fff;
+	}
 }
 
 @media (max-width: 767px) {
@@ -489,7 +495,7 @@
 		margin-bottom: 16px;
 	}
 	.menu-holder {
-		padding: 70px 0 30px;
+		padding: 120px 0 30px;
 	}
 
 	body.home .banner-wrapper .banner-video {
