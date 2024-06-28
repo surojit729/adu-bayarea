@@ -2870,7 +2870,13 @@ input[type="number"]::-webkit-outer-spin-button {
 	font-size: 40px;
 	margin-bottom: 20px;
 }
-
+.locationDetailsContentOuter p a {
+	text-decoration: underline;
+	color: #555d61;
+}
+.locationDetailsContentOuter p a:hover {
+	color: var(--primary-color);
+}
 .locationDetailsContentOuter .cardContent {
 	margin: 20px 0;
 }
@@ -3606,4 +3612,21 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .projectGalleryPic:hover > img {
 	transform: scale(1.1);
+}
+.getInTouchWidget img {
+	width: 100%;
+}
+
+.single .locationinglBanner {
+	min-height: 680px;
+}
+.single .locationinglBanner p {
+	color: #555d61;
+	max-width: 1200px;
+}
+.locationContentWrapper .featuredPic {
+	margin-top: -180px;
+}
+.single .locationContentWrapper {
+	padding-bottom: 80px;
 }

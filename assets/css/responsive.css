@@ -431,6 +431,12 @@
 	.menu-holder .nav li.current-menu-item a {
 		color: #fff;
 	}
+	.single .locationinglBanner {
+		min-height: auto;
+	}
+	.single .locationContentWrapper {
+		padding-bottom: 60px;
+	}
 }
 
 @media (max-width: 767px) {
@@ -682,6 +688,9 @@
 	}
 	.locationDetailsContentOuter .footerFormOuter {
 		margin-top: 25px;
+		padding: 15px;
+	}
+	.locationDetailsContentOuter .bgContent {
 		padding: 15px;
 	}
 }
