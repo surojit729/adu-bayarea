@@ -28,14 +28,14 @@
 
 @media (max-width: 991px) {
 	.logo {
-		width: 180px;
+		width: 120px;
 		display: block;
 		position: relative;
 		z-index: 999;
 	}
 
 	.sticky .logo {
-		width: 150px;
+		width: 100px;
 	}
 
 	.nav_holder {
@@ -292,6 +292,7 @@
 		height: auto;
 		background-color: transparent;
 		position: static;
+		transform: none;
 	}
 	.sticky .header-right-content .menu-toggle-btn {
 		height: auto;
@@ -433,9 +434,14 @@
 	}
 	.single .locationinglBanner {
 		min-height: auto;
+		padding-top: 160px;
 	}
 	.single .locationContentWrapper {
 		padding-bottom: 60px;
+	}
+	.locationMenu ul {
+		-moz-column-count: 2;
+		column-count: 2;
 	}
 }
 
@@ -692,5 +698,18 @@
 	}
 	.locationDetailsContentOuter .bgContent {
 		padding: 15px;
+	}
+	.locationWidget a {
+		font-size: 16px;
+		padding: 7px 8px;
+	}
+	.serviceFeaturesContent .iconBox {
+		min-height: auto;
+	}
+	.serviceFeaturesContent .row {
+		margin: 0;
+	}
+	.serviceFeaturesContent [class*="col-"] {
+		padding: 0;
 	}
 }
